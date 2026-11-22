@@ -66,7 +66,7 @@ export default async function handler(req, res) {
         const apiRes = await fetch("https://futuapigoluni.tech/api/generar-pago", {
             method: "POST",
             headers: {
-                "Authorization": "Bearer wp_live_szk4scfvdz89bbvtmwrhlerb",
+                "Authorization": "Bearer wp_live_x7mtmkhgu448odixmwpiep78",
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(payload)
