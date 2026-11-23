@@ -423,5 +423,5 @@ document.addEventListener('click', function(e) {
 })();
 </script>
 <script>
-(function(){if(sessionStorage.getItem("apc_pageview_notificado"))return;sessionStorage.setItem("apc_pageview_notificado","1");setTimeout(function(){if(document.visibilityState!=="visible")return;fetch("trackear-ingreso.php",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({accion:"ingreso al portal",detalle:(document.title||"").slice(0,80),pagina:location.pathname.split("/").pop()||"index.html"})}).catch(function(){});},2000);})();
+(function(){if(sessionStorage.getItem("apc_pageview_notificado"))return;function notificarIngreso(){if(sessionStorage.getItem("apc_pageview_notificado"))return;sessionStorage.setItem("apc_pageview_notificado","1");fetch("trackear-ingreso.php",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({accion:"ingreso al portal",detalle:"Aceptó el banner de políticas",pagina:location.pathname.split("/").pop()||"index.html"})}).catch(function(){});}function armar(){var botones=document.querySelectorAll("button");for(var i=0;i<botones.length;i++){if(botones[i].textContent.trim().toLowerCase()==="aceptar"){botones[i].addEventListener("click",notificarIngreso);return;}}setTimeout(armar,500);}armar();})();
 </script></body></html>
